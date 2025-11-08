@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Sidebar from './components/Header'; // Re-using Header.tsx as Sidebar
 import Home from './components/Hero'; // Re-using Hero.tsx as Home
-import Resume from './components/About'; // Re-using About.tsx as Resume
-import Projects from './components/Projects';
-import Blog from './components/Skills'; // Re-using Skills.tsx as Blog
-import Gallery from './components/Experience'; // Re-using Experience.tsx as Gallery
-import Contact from './components/Contact';
 import BottomNavBar from './components/BottomNavBar';
+
+// Lazy-load heavier / non-critical sections to improve initial load time.
+const Resume = React.lazy(() => import('./components/About'));
+const Projects = React.lazy(() => import('./components/Projects'));
+const Blog = React.lazy(() => import('./components/Skills'));
+const Gallery = React.lazy(() => import('./components/Experience'));
+const Contact = React.lazy(() => import('./components/Contact'));
 
 export type Tab = 'home' | 'resume' | 'projects' | 'blog' | 'gallery' | 'contact';
 
@@ -23,19 +25,41 @@ const App: React.FC = () => {
 
 
     const renderContent = () => {
+        // Keep `Home` eagerly loaded so first paint is fast.
+        // Other sections are lazy and will be loaded on demand.
         switch (activeTab) {
             case 'home':
                 return <Home />;
             case 'resume':
-                return <Resume />;
+                return (
+                    <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
+                        <Resume />
+                    </Suspense>
+                );
             case 'projects':
-                return <Projects />;
+                return (
+                    <Suspense fallback={<div className="text-center py-20">Loading projects...</div>}>
+                        <Projects />
+                    </Suspense>
+                );
             case 'blog':
-                return <Blog />;
+                return (
+                    <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
+                        <Blog />
+                    </Suspense>
+                );
             case 'gallery':
-                return <Gallery />;
+                return (
+                    <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
+                        <Gallery />
+                    </Suspense>
+                );
             case 'contact':
-                return <Contact />;
+                return (
+                    <Suspense fallback={<div className="text-center py-20">Loading contact...</div>}>
+                        <Contact />
+                    </Suspense>
+                );
             default:
                 return <Home />;
         }

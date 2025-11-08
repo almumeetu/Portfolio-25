@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Al Mumeetu Saikat - WordPress & Frontend Expert</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <style>
       :root {
         --c-brand: #8b5cf6; /* purple-500 */
@@ -43,18 +43,11 @@
         filter: blur(50px);
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
 </head>
   <body class="bg-slate-900 text-gray-200">
     <div id="root"></div>
+    <!-- Hint the browser to modulepreload the entry during navigation -->
+    <link rel="modulepreload" href="/index.tsx">
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
