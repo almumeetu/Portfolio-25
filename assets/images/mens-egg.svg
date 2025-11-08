@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g7" x1="0" x2="1">
+      <stop offset="0" stop-color="#06b6d4"/>
+      <stop offset="1" stop-color="#06d6a0"/>
+    </linearGradient>
+    <style>
+      .title{font:700 44px 'Inter', sans-serif; fill:#fff}
+      .domain{font:400 18px 'Inter', sans-serif; fill:rgba(255,255,255,0.95)}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g7)" />
+  <g transform="translate(80,160)">
+    <text class="title">Men's Egg Drama</text>
+    <text class="domain" y="60">mensegg.jp</text>
+  </g>
+</svg>
