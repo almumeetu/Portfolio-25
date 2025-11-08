@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Mumeetu Saikat - WordPress & Frontend Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+      :root {
+        --c-brand: #8b5cf6; /* purple-500 */
+        --c-brand-light: #a78bfa; /* purple-400 */
+        --c-brand-dark: #6d28d9; /* purple-700 */
+        --c-secondary: #6366f1; /* indigo-500 */
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow: hidden; /* Prevent body scrolling for app-like feel */
+        background-color: #0f172a; /* slate-900 */
+      }
+      .gradient-bg {
+         background: radial-gradient(circle at 10% 20%, #020617, #0f172a 70%, #1e293b 100%);
+      }
+      .aurora-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+            radial-gradient(at 27% 37%, hsla(262, 98%, 61%, 0.15) 0px, transparent 50%),
+            radial-gradient(at 97% 21%, hsla(242, 98%, 72%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 52% 99%, hsla(335, 98%, 72%, 0.15) 0px, transparent 50%),
+            radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 97% 96%, hsla(28, 60%, 74%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 79% 53%, hsla(303, 68%, 73%, 0.15) 0px, transparent 50%);
+        z-index: 0;
+        filter: blur(50px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-gray-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
