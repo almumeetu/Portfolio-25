@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g10" x1="0" x2="1">
+      <stop offset="0" stop-color="#8338ec"/>
+      <stop offset="1" stop-color="#3a0ca3"/>
+    </linearGradient>
+    <style>
+      .title{font:700 44px 'Inter', sans-serif; fill:#fff}
+      .domain{font:400 18px 'Inter', sans-serif; fill:rgba(255,255,255,0.95)}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g10)" />
+  <g transform="translate(80,160)">
+    <text class="title">Sycho Templates</text>
+    <text class="domain" y="60">almumeetu.github.io/sycho</text>
+  </g>
+</svg>
